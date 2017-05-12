@@ -6,7 +6,8 @@ public class StringAgain
 {
 	public static void main(String[] args) 
 	{
-		String str1 = "abcde";
+		//Below code is to merge values in between two strings
+		String str1 = "abcdef";
 		//char[] a = str1.toCharArray();
 		String str2 = "xyz";
 		int bigLength = str1.length()>str2.length()?str1.length():str2.length();
@@ -18,6 +19,7 @@ public class StringAgain
 			   System.out.print(str2.charAt(i));
 		}
 		System.out.println("");
+		//Two different ways to generate random number
 		System.out.println("<<<Using Random - Random Number>>>>>");
 		int min = 5;
 		int max = 10;
