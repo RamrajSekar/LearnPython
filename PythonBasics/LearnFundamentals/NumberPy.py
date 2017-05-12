@@ -3,7 +3,7 @@ Created on 11-May-2017
 To Learn about integers(2 & -2) and floating point numbers(2.0 and -2.1 or 4E2=4*10^2)
 @author: E002040
 '''
-
+print(22+5+1)
 print(2+1)
 print(3+4)
 print(3-2)
