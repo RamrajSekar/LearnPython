@@ -9,10 +9,10 @@ public class LearnArray {
 	public static void main(String[] args) 
 	{
 		// TODO Auto-generated method stub
-		/*int a[] = new int[5];
+		int a[] = new int[5];
 		int[] b = {1,2,3,4,5};
 		System.out.println("Length of a: "+a.length);
-		System.out.println("Length of b: "+b.length);*/
+		System.out.println("Length of b: "+b.length);
 		int TestCount;
 		Scanner scn = new Scanner(System.in);
 		System.out.println("Enter number of TestCases: ");
