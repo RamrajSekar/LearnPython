@@ -20,9 +20,9 @@ b = 0
 for i in a:
     b = b+i
 
-print 'The sum of values in a is: ',b
-print 'The mean of a is: ',b/len(a)
+print ('The sum of values in a is: ',b)
+print ('The mean of a is: ',b/len(a))
 
-print a[::-1]
+print (a[::-1])
 
 
