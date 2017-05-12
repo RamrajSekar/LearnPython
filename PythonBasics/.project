@@ -14,4 +14,51 @@
 	<natures>
 		<nature>org.python.pydev.pythonNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>Documents/Java sample programs.docx</name>
+			<type>1</type>
+			<location>C:/My folder/Java sample programs.docx</location>
+		</link>
+		<link>
+			<name>Documents/Java_InterviewQuests.docx</name>
+			<type>1</type>
+			<location>C:/My folder/Java_InterviewQuests.docx</location>
+		</link>
+		<link>
+			<name>Documents/OOPs concepts in Java.docx</name>
+			<type>1</type>
+			<location>C:/My folder/OOPs concepts in Java.docx</location>
+		</link>
+		<link>
+			<name>Documents/PostmanRest.one</name>
+			<type>1</type>
+			<location>C:/Users/IN02040/Documents/OneNote Notebooks/My Notebook/PostmanRest.one</location>
+		</link>
+		<link>
+			<name>Documents/RestAPI.one</name>
+			<type>1</type>
+			<location>C:/Users/IN02040/Documents/OneNote Notebooks/My Notebook/RestAPI.one</location>
+		</link>
+		<link>
+			<name>Documents/Sel_Imp_InterviewQuests(1).xlsx</name>
+			<type>1</type>
+			<location>C:/Users/IN02040/Documents/selenium material/Sel_Imp_InterviewQuests(1).xlsx</location>
+		</link>
+		<link>
+			<name>Documents/Selenium - - InterviewQuestions.docx</name>
+			<type>1</type>
+			<location>C:/My folder/Selenium - - InterviewQuestions.docx</location>
+		</link>
+		<link>
+			<name>Documents/TestComplete.one</name>
+			<type>1</type>
+			<location>C:/Users/IN02040/Documents/OneNote Notebooks/My Notebook/TestComplete.one</location>
+		</link>
+		<link>
+			<name>Documents/VBScript_InterviewQuests.docx</name>
+			<type>1</type>
+			<location>C:/My folder/VBScript_InterviewQuests.docx</location>
+		</link>
+	</linkedResources>
 </projectDescription>
