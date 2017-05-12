@@ -29,8 +29,8 @@ print('My husband name is: %s \n My wife name is: %s' %(a,b))
 print('First: {x} \n Second: {y}'.format(x=a,y=b))
 
 #No the expected format: print('Test it's not to test')
-#s = 'CidatyUcityda'
-#print s[-7]+s[2:4]+s[7:11]
+s = 'CidatyUcityda'
+print (s[-7]+s[2:4]+s[7:11])
 
 #print marker[-1]+marker[-2]+marker[-3]
     
