@@ -9,7 +9,7 @@ public class StringAgain
 		//Below code is to merge values in between two strings
 		String str1 = "abcdef";
 		//char[] a = str1.toCharArray();
-		String str2 = "xyz";
+		String str2 = "vxyz";
 		int bigLength = str1.length()>str2.length()?str1.length():str2.length();
 		for(int i = 0; i<bigLength; i++)
 		{
