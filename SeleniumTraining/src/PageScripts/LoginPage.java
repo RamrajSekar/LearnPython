@@ -1,39 +1,110 @@
 package PageScripts;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementNotVisibleException;
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
 
-public class LPage 
+import pageObjects.GuruLoginPage;
+
+public class LoginPage extends GuruLoginPage
 {
 
-	public static WebDriver drv;
-	static String burl;
-	public static WebElement uname;
+	
+	//static String burl;
+	private static WebDriver driver = null;
+	private static Alert LoginAlert;
 	
 	public static void main(String[] args) 
 	{
-		openUrl();
-		passUname();
+		//openUrl();
+		//passLogin("mngr106247");
+		//System.setProperty("webdriver.gecko.driver","C:\\Selenium\\SeleniumDowns\\geckodriver.exe");
+		
+		login();
+		verifyLogin();
+		System.out.println("Closing firefox now...!!!");
+		driver.quit();
 	}
 	
-	static void openUrl()
+	@Test
+	public static void login()
 	{
-		System.setProperty("webdriver.gecko.driver","C:\\Selenium\\SeleniumDowns\\geckodriver.exe");
-		drv = new FirefoxDriver();
-		burl = "http://www.demo.guru99.com/V4/";
-		drv.get(burl);
-	}
-	
-	static void passUname()
-	{
-		uname = drv.findElement(By.name("uid"));
-		uname.sendKeys("mngr77477");
-		//uname = drv.findElement(By.xpath("//input[@name='uid']"));
-		if (uname.isDisplayed())
-			System.out.println("Pass");
-		else
-			System.out.println("Fail, User name field is not available");
+		try
+		{
+			driver = new FirefoxDriver();
+			driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
+			driver.get("http://www.demo.guru99.com/V4/");
+			txt_loginName(driver);
+			txt_password(driver);
 			
+			if(isLoginButtonDisplayed(driver) == true)
+			{
+				System.out.println("Login button is displayed");
+				System.out.println("Signing in now..!!!");
+				btnlogin(driver);
+			}
+			
+		}
+		catch(NoSuchElementException e)
+		{
+			System.out.println("Login button is not displayed");
+		}
+		//driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
+		
 	}
+	
+	@AfterClass
+	public static void verifyLogin()
+	{
+		try
+		{
+			LoginPage ln = new LoginPage();
+			ln.isAlertDisplayed();
+			if(ln.isAlertDisplayed() == true)
+				LoginAlert.accept();
+			else
+			{
+				String actual = "Guru99 Bank Manager HomePage"; 
+				if(actual.equals(driver.getTitle()))
+				{
+					System.out.println("User logged in successfully");
+				}
+				else
+				{
+					System.out.println("User failed to login");
+					driver.quit();
+				}
+			}
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+		//Assert.assertFalse(login(), "User failed");
+	}
+	
+	public boolean isAlertDisplayed()
+	{
+		try
+		{
+			LoginAlert = driver.switchTo().alert();
+			//String LoginAlertName = LoginAlert.getText();
+			System.out.println(this.LoginAlert.getText());
+			return true;
+		}
+		catch(NoAlertPresentException e)
+		{
+			return false;
+		}
+	}
+
 }

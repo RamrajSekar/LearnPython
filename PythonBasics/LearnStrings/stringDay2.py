@@ -14,23 +14,23 @@ Created on 03-Apr-2017
 #print mode;
 
 d = 'CidatyUcityda'
-print ('a'+d)[1:]
-print d+''
-print d[0]+d[1:]
-print d[0:]
+print (('a'+d)[1:])
+print (d+'')
+print (d[0]+d[1:])
+print (d[0:])
 
 b= 'udaciy'
 t = 'bodacious'
 
-print b[0]+t[2:]
+print (b[0]+t[2:])
 
 x = 3.1459
 y = 27.63
 
-print int(float(y))
+print (int(float(y)))
 
 
 s = 'CidatyUcityda'
-s[6]+s[-2:]
+print(s[6]+s[-2:])
 
 
