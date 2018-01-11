@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 
 import pageObjects.GuruLoginPage;
 
-public class LoginPage extends GuruLoginPage
+public class LoginPage_Guru extends GuruLoginPage
 {
 
 	
@@ -67,7 +67,7 @@ public class LoginPage extends GuruLoginPage
 	{
 		try
 		{
-			LoginPage ln = new LoginPage();
+			LoginPage_Guru ln = new LoginPage_Guru();
 			ln.isAlertDisplayed();
 			if(ln.isAlertDisplayed() == true)
 				LoginAlert.accept();
